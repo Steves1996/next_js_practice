@@ -1,0 +1,29 @@
+[
+    {
+        "id":1,
+        "name":"Jean peirre",
+        "avatar":"https://img.freepik.com/vecteurs-libre/homme-affaires-caractere-avatar-isole_24877-60111.jpg?w=2000",
+        "email":"jeanpiere@gmail.com",
+        "salary":"50000000",
+        "date":"2022-02-15",
+        "status":"Active"
+    },
+    {
+        "id":2,
+        "name":"Jean simone",
+        "avatar":"https://img.freepik.com/vecteurs-libre/homme-affaires-caractere-avatar-isole_24877-60111.jpg?w=2000",
+        "email":"jeansimone@gmail.com",
+        "salary":"5000000",
+        "date":"2022-02-15",
+        "status":"Inactive"
+    },
+    {
+        "id":3,
+        "name":"Jean kevin",
+        "avatar":"https://img.freepik.com/vecteurs-libre/homme-affaires-caractere-avatar-isole_24877-60111.jpg?w=2000",
+        "email":"jeankevin@gmail.com",
+        "salary":"500000",
+        "date":"2022-02-15",
+        "status":"Inactive"
+    }
+]
