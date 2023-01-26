@@ -4,7 +4,7 @@ import data from '../database/data.json';
 import { getUsers } from '../lib/helper';
 import { useQuery } from 'react-query';
 import {useSelector, useDispatch} from 'react-redux';
-import { toggleChangeAction } from '@/redux/reducer';
+import { toggleChangeAction, updateAction } from '@/redux/reducer';
 
 export default function Table() {
 
@@ -48,15 +48,17 @@ export default function Table() {
     )
 }
 
-function TableRow({ id, name, avatar, email, salary, date, status }) {
+function TableRow({ _id, name, avatar, email, salary, date, status }) {
     
     const visible = useSelector((state) => state.app.client.toggleForm)
     const dispatch = useDispatch()
 
 
     const onUpdate = ()=>{
-        dispatch(toggleChangeAction())
-        console.log(visible)
+        dispatch(toggleChangeAction(_id))
+        if(visible){
+            dispatch(updateAction(_id))
+        }
     }
 
 

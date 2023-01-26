@@ -1,15 +1,20 @@
 import Head from 'next/head'
-import { useState } from 'react';
 import { BiUserPlus } from 'react-icons/bi';
 import Form from '../components/form';
 import Table from '../components/table';
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleChangeAction } from "@/redux/reducer";
+
 
 
 export default function Home() {
 
-  const [visible, setVisible] = useState(false)
-  const handler = () =>{
-    setVisible(!visible)
+
+  const visible = useSelector((state) => state.app.client.toggleForm)
+  const dispatch = useDispatch()
+  
+  const handler = () => {
+    dispatch(toggleChangeAction())
   }
   return (
     <section>
@@ -31,7 +36,7 @@ export default function Home() {
         </div>
 
         {/* collapsable form */}
-          {visible ? <Form></Form> : <></>}
+        {visible ? <Form></Form> : <></>}
         {/* table */}
         <div className='container mx-auto'>
           <Table></Table>
